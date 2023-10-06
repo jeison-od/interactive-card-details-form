@@ -1,0 +1,162 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  margin-right: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  background-image: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  height: 680px;
+}
+
+.bg-card-front {
+  width: 380px;
+  position: relative;
+  left: 200px;
+  top: 100px;
+}
+.bg-card-back {
+  width: 380px;
+  position: relative;
+  top: 350px;
+  right: 100px;
+}
+.card-num {
+  font-size: 22px;
+  color: white;
+  position: absolute;
+  top: 230px;
+  left: 230px;
+  letter-spacing: 0.2em;
+}
+.card-name {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 280px;
+  left: 230px;
+  letter-spacing: 0.2em;
+}
+.card-expire {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 280px;
+  left: 500px;
+  letter-spacing: 0.2em;
+}
+.cards svg {
+  position: absolute;
+  top: 120px;
+  left: 230px;
+}
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 10px;
+}
+
+input {
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 10px;
+  width: 290px;
+  height: 40px;
+  margin-bottom: 20px;
+  color: black;
+}
+::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.cvc input {
+  width: 150px;
+}
+button {
+  width: 290px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+}
+.form {
+  margin-top: 100px;
+}
+.date {
+  width: 60px;
+}
+
+@media screen and (max-width: 1283px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 2780px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+  }
+  .cards {
+    margin: 30px;
+    height: 360px;
+    width: 378px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .form {
+    margin: 0;
+    width: 378px;
+  }
+
+  .thankyou svg {
+    visibility: hidden;
+  }
+
+  .bg-card-front {
+    width: 280px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .bg-card-back {
+    width: 280px;
+    position: relative;
+    top: -100px;
+    right: 30px;
+  }
+  .card-num {
+    visibility: hidden;
+  }
+  .card-name {
+    visibility: hidden;
+  }
+  .card-expire {
+    visibility: hidden;
+  }
+  .cards svg {
+    visibility: hidden;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
+}

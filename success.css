@@ -1,0 +1,14 @@
+.thankyou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+
+.thankyou svg {
+    position: absolute;
+    top: 100px;
+    left: 1135px;
+
+}
