@@ -3,59 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <title>Del❤ | Interactive card details form</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="cards">
         <img class="bg-card-front" src="images/bg-card-front.png" alt="" />
-        <span class="card-num" id="card-num" onchange=updateCardName()>0000 0000 0000 0000</span>
+        <span class="card-num" id="card-num">0000 0000 0000 0000</span>
         <span class="card-name">Jane Appleseed</span>
         <span class="card-expire">00/00</span>
-        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/>
+          <path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/>
+        </svg>
         <img class="bg-card-back" src="images/bg-card-back.png" alt="" />
       </div>
 
       <div class="form">
-        <h2 class="">Cardholder Name</h2>
-        <input type="text" placeholder="e.g. Jane Appleseed" />
-        <h2 class="">Card Number</h2>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+        <h2>Cardholder Name</h2>
+        <input type="text" id="input-card-name" placeholder="e.g. Jane Appleseed" required />
+        <h2>Card Number</h2>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required />
+        <p id="error-text"></p>
         <h2>Exp. Date (MM/YY)</h2>
-        <input class="date" type="text" placeholder="MM" width="20px" />
-        <input class="date" type="text" name="date" id="" placeholder="YY" />
+        <input class="date" type="number" placeholder="MM" min="1" max="12" required />
+        <input class="date" type="number" placeholder="YY" min="" required id="year-input"/>
         <div class="cvc">
-          <h2 class="">CVC</h2>
-          <input type="text" placeholder="e.g. 123" />
+          <h2>CVC</h2>
+          <input type="number" placeholder="e.g. 123" maxlength="3" required />
         </div>
-
         <button onclick="handleConfirm()">Confirm</button>
       </div>
     </div>
-    <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
 
-  000 -->
     <div class="footer">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Del ♥</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Del ♥</a>.
     </div>
   </body>
 </html>
