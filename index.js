@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
   }
   
   function sanitizeCardNumber(cardNumber) {
-    return cardNumber.replace(/\D/g, ''); // Elimina todo lo que no sea número
+    return cardNumber.replace(/\D/g, '');
   }
   
   function limitCardLength(cardNumber, newChar) {
@@ -51,11 +51,11 @@ window.addEventListener("load", () => {
   }
   
   function renderAnimatedText(targetElement, newText) {
-    targetElement.innerHTML = ""; // Limpia el contenido anterior
+    targetElement.innerHTML = "";
     newText.split("").forEach((char, index, arr) => {
       const charSpan = document.createElement("span");
       charSpan.textContent = char;
-      if (index === arr.length - 1) charSpan.classList.add("bounce-in"); // Agrega animación solo al último carácter
+      if (index === arr.length - 1) charSpan.classList.add("bounce-in");
       targetElement.appendChild(charSpan);
     });
   }
